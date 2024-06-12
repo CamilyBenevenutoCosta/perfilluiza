@@ -1,5 +1,18 @@
-
+/* Variaveis das cores */
+/*TEMA DARK*/
 :root, :root[data-theme='dark'] {
-    --primary-color: #f0f0f0;
-    --primary-bg-color: #111217;
+    --primary-color: #f0f0f0;       /* cor principal de textos */
+    --primary-bg-color: #111217;  /* cor principal de fundo */
+    /* bg = background == cor de fundo */
+}
+/*TEMA LIGHT*/
+:root[data-theme='light'] {
+    --primary-color: #000;       /* cor principal de textos */
+    --primary-bg-color: #f0f2f5;  /* cor principal de fundo */
+    /* bg = background == cor de fundo */
+
+}
+body {
+    background: var(--primary-bg-color); /*cor fundo*/
+    color: var(--primary-color); /*cor geral dos textos*/
 }
