@@ -12,15 +12,49 @@
     --primary-color: #f0f0f0;       /* cor principal de textos */
     --primary-bg-color: #111217;  /* cor principal de fundo */
     /* bg = background == cor de fundo */
+    --secondary-bg-color:#28292E;  /* cor de fundo secundário */
+    --primary-border-color:#28292E;  /* cor principal de borda */
+    --secondary-border-color:#56575A;  /* cor secundária de borda */
+    --title-color:#F0F0F0;  /*cor do título */
+    --link-color:#8f8f8f;  
+    --link-hover:#F0F0F0;  /* cor para link */
+    --icon-color:#C7C8C9;  /* cor do ícone */
 }
 /*TEMA LIGHT*/
 :root[data-theme='light'] {
-    --primary-color: #000;       /* cor principal de textos */
+    --primary-color: #0d0c09;       /* cor principal de textos */
     --primary-bg-color: #f0f2f5;  /* cor principal de fundo */
     /* bg = background == cor de fundo */
-
+    --secondary-bg-color:#C7C8C9;  /* cor de fundo secundário */
+    --primary-border-color:#C7C8C9;  /* cor principal de borda */
+    --secondary-border-color:#9A9A9C;  /* cor secundária de borda */
+    --title-color:#0B0B0F;  /*cor do título */
+    --link-color:#a3a2a2;  
+    --link-hover:#0B0B0F;  /* cor para link */
+    --icon-color:#56575A;  /* cor do ícone */
 }
+
+  /* Reset CSS */
+*{
+    margin:0 ;   /* margem (parte de fora de um elemento) */
+    padding: 0;   /* preenchimento (parte de dentro de um elemento) */
+    box-sizing:border-box;   /* dimensionamento de caixa */
+    vertical-align: baseline;   /* alinhamento vertical */
+    list-style:none ;   /* estilo da lista */
+    scrollbar-width: thin;   /* barra de rolagem - thin = fina */
+    scrollbar-color: var(--secondary-bg-color) transparent;   /* cor da barra de rolagem */
+}
+
 body {
     background: var(--primary-bg-color); /*cor fundo*/
     color: var(--primary-color); /*cor geral dos textos*/
+    font-family: 'Playwrite', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+a:hover {
+    color: var(--link-hover);
 }
