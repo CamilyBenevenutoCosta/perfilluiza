@@ -55,6 +55,27 @@ a {
     text-decoration: none;
     color: var(--link-color);
 }
-a:hover {
+
+a:hover {                        /* :hover (faz a mudança de cor ao passar o mouse) */
     color: var(--link-hover);
 }
+
+i {
+    color: var(--icon-color);
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;   /*coloca o conteúdo em linha e permite a quebra de linha. */
+    justify-content: space-between;   /* os itens dentro do container (caixa) flexível serão distribuídos de maneira uniforme ao longo do eixo principal,com espaços iguais entre eles */
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;   /* primeiro valor = top e bottom,segundo valor = right e left (se não tiver nada embaixo o bootom vira right e left) */
+    z-index: 2;  /* é uma sobreposição (ele ficará emcima de um valor)*/
+}
+
+.header-logo .logo  {
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
