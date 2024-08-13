@@ -66,7 +66,7 @@ i {
 
 .header {
     display: flex;
-    flex-flow: row wrap;   /*coloca o conteúdo em linha e permite a quebra de linha. */
+    flex-flow: row wrap;   /* coloca o conteúdo em linha e permite a quebra de linha. */
     justify-content: space-between;   /* os itens dentro do container (caixa) flexível serão distribuídos de maneira uniforme ao longo do eixo principal,com espaços iguais entre eles */
     align-items: center;
     width: 100%;
@@ -79,3 +79,23 @@ i {
     height: 3.25rem;
 }
 
+#toggleTheme {
+    font-size:1.5rem ;   /* Tamanho da fonte */
+    color: var(--icon-color);
+    cursor:pointer;   /* muda o ícone de clique */
+    transition: ease-in-out .4s;    /* ele dar um "efeito de animações" no elemento */
+}
+
+.menu {
+    display: flex;   /* torna o elemento um Flex Container (deixa a caixa flexível) automaticamente transformando todos os seus filhos diretos em Flex itens */
+    align-items: center;
+    background: var(--primary-bg-color);
+    gap: 1rem;    /* dá espaçamento entre os elementos */
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    
+}
