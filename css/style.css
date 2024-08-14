@@ -70,7 +70,7 @@ i {
     justify-content: space-between;   /* os itens dentro do container (caixa) flexível serão distribuídos de maneira uniforme ao longo do eixo principal,com espaços iguais entre eles */
     align-items: center;
     width: 100%;
-    padding: 0.5rem 1rem;   /* primeiro valor = top e bottom,segundo valor = right e left (se não tiver nada embaixo o bootom vira right e left) */
+    padding: 0.5rem 1rem;   /* primeiro valor = top e bottom,segundo valor = right e left (se não tiver nada embaixo o bootom vira right e left)(um terceiro valor sempre em baixo) */
     z-index: 2;  /* é uma sobreposição (ele ficará emcima de um valor)*/
 }
 
@@ -97,5 +97,34 @@ i {
     display: flex;
     align-items: center;
     gap: .5rem;
-    
+}
+
+.menu-mobile {    /* Ul */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid var(--primary-border-color);
+}
+
+.menu-mobile .menu-link {
+    flex-direction: column;  /* vai deixar em coluna*/
+    justify-content: center;
+    padding: .5rem 1rem;    /* o . é para abreviar o 0 em .5rem (0.5rem) */
+}
+
+.menu-link.active .menu-icon,  /* o "active" serve para deixar um botão como principal,deixando toda a vez que carregar o site,onde o "active" estiver vai ser onde o site vai "abrir",o exemplo seria o home de um site que toda vez que é recarregado a página,ela vai direto para o home */
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text {
+    color: var(--link-hover);
+}
+
+.menu-icon, .menu-text {
+    color:var(--link-color);
+    font-weight: 600;  /* peso de fonte (deixa em negrito,muda a espessura da letra) */ 
+}
+
+.menu-icon {
+    font-size: 1.5rem;
 }
