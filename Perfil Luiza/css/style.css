@@ -195,6 +195,19 @@ html[data-theme='light'] .logo2 {
     color: var(--primary-color);
 }
 
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
                 /* - - - - - - - - - - - - - - - - - - - - - */
 
                               /* CSS resposivo */
