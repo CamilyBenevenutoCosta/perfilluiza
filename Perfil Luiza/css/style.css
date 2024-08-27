@@ -208,6 +208,16 @@ html[data-theme='light'] .logo2 {
     gap: 1.5rem;
 }
 
+.video iframe{   /* precisa do "iframe" por conta da div com a classe "video" (se não me engano) */
+    width: 100%;
+    aspect-ratio: 16/9; /* é a dimensão do vídeo */
+}
+
+#home, .projetos, .sobre, .contato {   
+    padding: 3.5rem 5rem;
+
+}
+
                 /* - - - - - - - - - - - - - - - - - - - - - */
 
                               /* CSS resposivo */
