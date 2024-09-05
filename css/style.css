@@ -70,7 +70,7 @@ i {
     justify-content: space-between;   /* os itens dentro do container (caixa) flexível serão distribuídos de maneira uniforme ao longo do eixo principal,com espaços iguais entre eles */
     align-items: center;
     width: 100%;
-    padding: 0.5rem 1rem;   /* primeiro valor = top e bottom,segundo valor = right e left (se não tiver nada embaixo o bootom vira right e left)(um terceiro valor sempre em baixo) */
+    padding: 0.5rem 1rem;   /* primeiro valor = top e bottom,segundo valor = right e left (se não tiver nada embaixo o bootom vira right e left)(um terceiro valor sempre em baixo) (os valores estão no sentido horário) */
     z-index: 2;  /* é uma sobreposição (ele ficará emcima de um valor)*/
 }
 
@@ -214,7 +214,7 @@ html[data-theme='light'] .logo2 {
 }
 
 #home, .projetos, .sobre, .contato {   
-    padding: 5rem 5rem;
+    padding: 7rem 5rem;
 }
 
 .projetos {
@@ -227,6 +227,12 @@ html[data-theme='light'] .logo2 {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .card-cover {
@@ -280,7 +286,7 @@ html[data-theme='light'] .logo2 {
 
                 /* - - - - - - - - - - - - - - - - - - - - - */
 
-                              /* CSS resposivo */
+                              /* CSS resposivo min-width: 768px */
 @media (min-width: 768px) {
     .header {
         position: fixed;
@@ -293,5 +299,46 @@ html[data-theme='light'] .logo2 {
     .header-nav {
         display: flex;
     }
-}
+    .header-nav,
+    .header-toggle {
+        min-width: 30%;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    #home, .projetos, .sobre, .contato {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contato {
+        padding: 6rem;
+    }
+    .contato p {
+        width: 80%;
+    }
+    footer {
+        margin: 0;
+    }
+}                       /* Fim CSS resposivo min-width: 768px */
+
+                        /* CSS resposivo de min-width: 992px */
+@media (min-width: 992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+    .card-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .card-cover {
+        width: 55%;
+    }
+}                 /* Fim CSS resposivo de min-width: 992px */
 
