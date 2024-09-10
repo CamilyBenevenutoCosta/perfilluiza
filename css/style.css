@@ -332,6 +332,7 @@ html[data-theme='light'] .logo2 {
 @media (min-width: 992px) {
     .projeto-card {
         flex-direction: row;
+        margin-bottom: 50px;
     }
     .card-reverse {
         flex-direction: row-reverse;
