@@ -367,8 +367,12 @@ html[data-theme='light'] .logo2 {
     border-radius: 0rem 0rem 2rem 2rem; /* deixa apenas as bordars de baixo redondas */
 }
 
+.accordion-item.active .accordion-item.end{
+    border-radius: 0;
+}
+
 .accordion-body {
-    display: none; 
+   /* display: none; */
     padding: 1.25rem;
     flex-direction: column;
     text-align: justify;
@@ -376,6 +380,16 @@ html[data-theme='light'] .logo2 {
     gap: 1rem;
     border: 1px solid var(--primary-border-color);
 }
+
+.accordion-item.active .accordion-header {
+    background: var(--secondary-bg-color);
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+/* Rotacionar Ícone */
 
                 /* - - - - - - - - - - - - - - - - - - - - - */
 
