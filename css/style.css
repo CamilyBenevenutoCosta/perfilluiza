@@ -72,6 +72,7 @@ i {
     width: 100%;
     padding: 0.5rem 1rem;   /* primeiro valor = top e bottom,segundo valor = right e left (se não tiver nada embaixo o bootom vira right e left)(um terceiro valor sempre em baixo) (os valores estão no sentido horário) */
     z-index: 2;  /* é uma sobreposição (ele ficará emcima de um valor)*/
+    background: var(--primary-bg-color);
 }
 
 .header-logo .logo  {
@@ -390,7 +391,46 @@ html[data-theme='light'] .logo2 {
 }
 
 /* Rotacionar Ícone */
+.accordion-item.active .bi-caret-down{
+    transform: rotate(180deg);
+}
+/* Fim Rotacionar Ícone */
 
+/* Contato */
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-top: 2px solid var(--primary-border-color);
+    border-bottom: 2px solid var(--secondary-border-color);
+}
+
+.contato p {
+    text-align: center;
+}
+
+.contato .btn {
+    width: auto;
+}
+
+.contato .email {
+    text-transform: uppercase;
+}
+/* Fim Contato */
+
+/* Roda Pé = Footer */
+footer {
+    margin-bottom:5rem;
+}
+
+footer p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+/* Fim Roda Pé */
                 /* - - - - - - - - - - - - - - - - - - - - - */
 
                               /* CSS resposivo min-width: 768px */
