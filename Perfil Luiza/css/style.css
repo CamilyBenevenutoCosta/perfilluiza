@@ -1,4 +1,4 @@
-/* Google Fonts */ /* Atalho para comentar Shift + Alt + A */
+/* Google Fonts */ /* Atalho para comentar Shift + Alt + A */ /* ctrl + f = barra de pesquisa para achar elementos */
 
 
 
@@ -9,14 +9,14 @@
 /* Variaveis das cores */
 /*TEMA DARK*/
 :root, :root[data-theme='dark'] {
-    --primary-color: #f0f0f0;       /* cor principal de textos */
-    --primary-bg-color: #111217;  /* cor principal de fundo */
+    --primary-color: #f0f0f0;      /* cor principal de textos */
+    --primary-bg-color: #1b2036;  /* cor principal de fundo */
     /* bg = background == cor de fundo */
-    --secondary-bg-color:#28292E;  /* cor de fundo secundário */
-    --primary-border-color:#28292E;  /* cor principal de borda */
-    --secondary-border-color:#808080;  /* cor secundária de borda */
+    --secondary-bg-color:#3b3f53;  /* cor de fundo secundário */
+    --primary-border-color:#424559;  /* cor principal de borda */
+    --secondary-border-color:#55566b;  /* cor secundária de borda */
     --title-color:#F0F0F0;  /*cor do título */
-    --link-color:#8f8f8f;  
+    --link-color:#9098ae;  
     --link-hover:#F0F0F0;  /* cor para link */
     --icon-color:#C7C8C9;  /* cor do ícone */
 }
@@ -70,8 +70,9 @@ i {
     justify-content: space-between;   /* os itens dentro do container (caixa) flexível serão distribuídos de maneira uniforme ao longo do eixo principal,com espaços iguais entre eles */
     align-items: center;
     width: 100%;
-    padding: 0.5rem 1rem;   /* primeiro valor = top e bottom,segundo valor = right e left (se não tiver nada embaixo o bootom vira right e left)(um terceiro valor sempre em baixo) */
+    padding: 0.5rem 1rem;   /* primeiro valor = top e bottom,segundo valor = right e left (se não tiver nada embaixo o bootom vira right e left)(um terceiro valor sempre em baixo) (os valores estão no sentido horário) */
     z-index: 2;  /* é uma sobreposição (ele ficará emcima de um valor)*/
+    background: var(--primary-bg-color);
 }
 
 .header-logo .logo  {
@@ -99,6 +100,8 @@ html[data-theme='light'] .logo2 {
     color: var(--icon-color);
     cursor:pointer;   /* muda o ícone de clique */
     transition: ease-in-out .4s;    /* ele dar um "efeito de animações" no elemento */
+    float: right;
+    position: relative;
 }
 
 .menu {
@@ -214,13 +217,223 @@ html[data-theme='light'] .logo2 {
 }
 
 #home, .projetos, .sobre, .contato {   
-    padding: 3.5rem 5rem;
-
+    padding: 7rem 5rem;
 }
 
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-cover {
+    width: 100%;
+    border-radius: 4rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.card-title {
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 400;
+    font-family: "Poppins";
+}
+
+.card-description {
+    color: var(--primary-color);
+    text-align: justify;
+}
+
+.card-lista {
+    margin-left: 2rem;
+}
+
+.card-item {
+    list-style: disc;
+}
+
+.card-button, .card-description {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card-button .btn {
+    padding: .65rem 1.25rem;
+}
+
+.card-button .btn span {
+    font-size: 1rem;
+}
+
+                 /* ------------------Sobre -------------------- */
+.sobre {
+    display:flex ;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sobre-content1,
+.sobre-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sobre-perfil {  /* imagem */
+    width: 100%;
+    border-radius: 50rem;
+    border: 8px solid var(--secondary-border-color);  
+}
+
+.sobre-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: justify;
+    gap: 1rem;
+}
+
+.sobre-icones {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.sobre-icones .bi-chat-right-heart {
+    color: red;
+    font-size: x-large;
+}
+
+.sobre-content2 .col1,
+.sobre-content2 .col2 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 1rem;
+} 
+
+.sobre-content2 .col1 .row1,
+.sobre-content2 .col1 .row2 {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+                          /* - - - - -  Cursos - - - - -  */
+.accordion-header {
+    width: 100%;
+    display: flex;
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--primary-border-color);
+    text-align: left;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+.accordion-header span {
+    color: var(--title-color);
+}
+
+.accordion-header.start {
+    border-radius: 2rem 2rem 0rem 0rem; /* deixa apenas as bordars de cima redondas */
+}
+
+.accordion-header.end,
+.accordion-item.active .accordion-body.end {
+    border-radius: 0rem 0rem 2rem 2rem; /* deixa apenas as bordars de baixo redondas */
+}
+
+.accordion-item.active .accordion-item.end{
+    border-radius: 0;
+}
+
+.accordion-body {
+    display: none; 
+    padding: 1.25rem;
+    flex-direction: column;
+    text-align: justify;
+    align-items: flex-start;
+    gap: 1rem;
+    border: 1px solid var(--primary-border-color);
+}
+
+.accordion-item.active .accordion-header {
+    background: var(--secondary-bg-color);
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+/* Rotacionar Ícone */
+.accordion-item.active .bi-caret-down{
+    transform: rotate(180deg);
+}
+/* Fim Rotacionar Ícone */
+
+/* Contato */
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-top: 2px solid var(--primary-border-color);
+    border-bottom: 2px solid var(--secondary-border-color);
+}
+
+.contato p {
+    text-align: center;
+}
+
+.contato .btn {
+    width: auto;
+}
+
+.contato .email {
+    text-transform: uppercase;
+}
+/* Fim Contato */
+
+/* Roda Pé = Footer */
+footer {
+    margin-bottom:5rem;
+}
+
+footer p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+/* Fim Roda Pé */
                 /* - - - - - - - - - - - - - - - - - - - - - */
 
-                              /* CSS resposivo */
+                              /* CSS resposivo min-width: 768px */
 @media (min-width: 768px) {
     .header {
         position: fixed;
@@ -233,5 +446,107 @@ html[data-theme='light'] .logo2 {
     .header-nav {
         display: flex;
     }
-}
+    .header-nav,
+    .header-toggle {
+        min-width: 30%;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    #home, .projetos, .sobre, .contato {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contato {
+        padding: 6rem;
+    }
+    .contato p {
+        width: 80%;
+    }
+    footer {
+        margin: 0;
+    }
+}                       /* Fim CSS resposivo min-width: 768px */
 
+                        /* CSS resposivo de min-width: 992px */
+@media (min-width: 992px) {
+    .projeto-card {
+        flex-direction: row;
+        margin-bottom: 50px;
+    }
+    .card-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .card-cover {
+        width: 55%;
+    }
+    .sobre {
+        gap: 5rem;
+    }
+    .sobre-content1,
+    .sobre-content2 {
+        display: grid;
+        grid-template-columns: 34% 60%;  /* separa a tela em colunas de 34 e 60 ⬜⬜ */
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+    .sobre-descricao h2 {
+        text-align: left;
+    }
+    .descricao-button {
+       justify-content: flex-start; 
+    }
+}                 /* Fim CSS resposivo de min-width: 992px */
+
+                  /*  CSS resposivo de min-width: 1200px */
+@media (min-width:1200px) {
+    h2{
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+    #home {
+        padding: 10rem 6rem 2rem;
+    }
+    .main-content .btn {
+        width: auto;
+    }
+    p,
+    span,
+    li {
+        font-size: 1.15rem;
+    }
+    .card-button .btn,
+    .descricao-button .btn {   /* elementos de mesmo bloco são separados por espaço,já os elementos que são de blocos diferentes são separados por vírgula */
+        width: auto;
+    }
+}                   /* Fim CSS resposivo de min-width: 1200px */
+
+                   /* CSS resposivo de min-width: 1400px */
+@media (min-witch:1400px) {
+    h1 {
+        font-size: 6.25rem;
+    }
+    h2 {
+        font-size: 4.5rem;
+    }
+    h3 {
+        font-size: 3.25rem;
+    }
+    .header {
+        padding: 12rem 15rem 2rem;
+    }
+    .projetos, .sobre {
+        padding: 10rem 15rem 4rem;
+    }
+}              /* Fim CSS resposivo de min-width: 1400px */
