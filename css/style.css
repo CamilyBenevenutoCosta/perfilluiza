@@ -9,14 +9,14 @@
 /* Variaveis das cores */
 /*TEMA DARK*/
 :root, :root[data-theme='dark'] {
-    --primary-color: #f0f0f0;       /* cor principal de textos */
-    --primary-bg-color: #111217;  /* cor principal de fundo */
+    --primary-color: #f0f0f0;      /* cor principal de textos */
+    --primary-bg-color: #1b2036;  /* cor principal de fundo */
     /* bg = background == cor de fundo */
-    --secondary-bg-color:#28292E;  /* cor de fundo secundário */
-    --primary-border-color:#28292E;  /* cor principal de borda */
-    --secondary-border-color:#808080;  /* cor secundária de borda */
+    --secondary-bg-color:#3b3f53;  /* cor de fundo secundário */
+    --primary-border-color:#424559;  /* cor principal de borda */
+    --secondary-border-color:#55566b;  /* cor secundária de borda */
     --title-color:#F0F0F0;  /*cor do título */
-    --link-color:#8f8f8f;  
+    --link-color:#9098ae;  
     --link-hover:#F0F0F0;  /* cor para link */
     --icon-color:#C7C8C9;  /* cor do ícone */
 }
@@ -73,6 +73,7 @@ i {
     padding: 0.5rem 1rem;   /* primeiro valor = top e bottom,segundo valor = right e left (se não tiver nada embaixo o bootom vira right e left)(um terceiro valor sempre em baixo) (os valores estão no sentido horário) */
     z-index: 2;  /* é uma sobreposição (ele ficará emcima de um valor)*/
     background: var(--primary-bg-color);
+    gap: 0;
 }
 
 .header-logo .logo  {
@@ -83,7 +84,7 @@ i {
 .header-logo .logo2 {
     width: 11.25rem;
     height: 3.25rem;
-    margin-left: 20px;
+    margin-left: 5px;
     position: relative;
     bottom: -2px;
 }
@@ -438,7 +439,8 @@ footer p {
     .header {
         position: fixed;
         border-bottom: 1px solid var(--primary-border-color);
-        padding: 1rem 6rem;
+        padding: 1rem 2rem;
+        gap: 0;
     }
     .nav-mobile {
         display: none;
@@ -463,6 +465,7 @@ footer p {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding: 1rem;
     }
     .contato {
         padding: 6rem;
@@ -472,6 +475,15 @@ footer p {
     }
     footer {
         margin: 0;
+    }
+    .header-toggle{
+        padding: 0;
+    }
+    .header-logo .logo,
+    .header-logo .logo2 {
+        margin-left: 3px;
+        position: relative;
+        left: 50px;
     }
 }                       /* Fim CSS resposivo min-width: 768px */
 
@@ -499,6 +511,12 @@ footer p {
         align-items: flex-start;
         gap: 4rem;
     }
+    .sobre-descricao h2 {
+        text-align: left;
+    }
+    .descricao-button {
+       justify-content: flex-start; 
+    }
 }                 /* Fim CSS resposivo de min-width: 992px */
 
                   /*  CSS resposivo de min-width: 1200px */
@@ -512,6 +530,9 @@ footer p {
     #home {
         padding: 10rem 6rem 2rem;
     }
+    .main-content .btn {
+        width: auto;
+    }
     p,
     span,
     li {
@@ -524,7 +545,7 @@ footer p {
 }                   /* Fim CSS resposivo de min-width: 1200px */
 
                    /* CSS resposivo de min-width: 1400px */
-@media (min-witch:1400px) {
+@media (min-width:1400px) {
     h1 {
         font-size: 6.25rem;
     }
@@ -533,5 +554,14 @@ footer p {
     }
     h3 {
         font-size: 3.25rem;
+    }
+    .header {
+        padding: 12rem 15rem 2rem;
+    }
+    .projetos, .sobre {
+        padding: 10rem 15rem 4rem;
+    }
+    .header-toggle{
+        padding: 0;
     }
 }              /* Fim CSS resposivo de min-width: 1400px */
